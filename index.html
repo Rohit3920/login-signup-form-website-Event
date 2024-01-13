@@ -10,14 +10,16 @@
 <body>
     <div class="container">
         <div class="row">
-            <scetion class="loginForm">
+            <!---------------------------------------------------Login form------------------------------------->
+            <scetion id="loginForm">
                 <h1 class="loginHead">Login Form</h1>
                 <form class="content">
                     <div class="inputFeild">
                         <label for="username">Username</label>
                         <div class="contentFeild">
                             <span id="checkUser">@</span>
-                            <input type="text" name="username" id="username" onchange="ValidUser()" placeholder="Username">
+                            <input type="email" name="username" id="username" onchange="ValidUser()"
+                                placeholder="Username">
                         </div>
                     </div>
                     <br>
@@ -25,7 +27,8 @@
                         <label for="password">Password</label>
                         <div class="passFeild">
                             <span id="checkPass">@</span>
-                            <input type="password" name="password" id="password" placeholder="Password" onchange="ValidPass()">
+                            <input type="password" name="password" id="password" placeholder="Password"
+                                onchange="ValidPass()">
                             <input type="checkbox" name="checkbox" id="passCheck" onclick="passVisible()">
                         </div>
                     </div>
@@ -33,6 +36,84 @@
                     <button type="button" id="loginBtn" onclick="loginData()">Login</button>
                 </form>
             </scetion>
+
+            <!---------------------------------------------------signup form------------------------------------->
+            <section id="signupForm">
+                <h1>Signup Form</h1>
+                <form class="content">
+                    <div class="inputFeild">
+                        <label for="name">Name : </label>
+                        <input type="text" name="name" id="Uname" required>
+                    </div>
+                    <div class="inputFeild">
+                        <label for="email">Email : </label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="inputFeild">
+                        <label for="country">choose your country: </label>
+                        <select name="country" id="country">
+                            <option value="Choose one" disabled selected> choose one</option>
+                            <option value="India">India</option>
+                            <option value="Usa">Usa</option>
+                            <option value="China">China</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Pakistan">Pakistan</option>
+                        </select>
+                    </div>
+                    <div class="inputFeild">
+                        <label for="contact">Contact No. : </label>
+                        <span id="countryCode"></span>
+                        <input type="number" name="contact" id="contact" required>
+                    </div>
+                    <div class="inputFeild">
+                        <label for="gender">Gender : </label><br />
+                        <div class="checkGender" id="checkGender">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" value="male">
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" value="female">
+                            <label for="other">Other </label>
+                            <input type="radio" name="gender" value="other">
+                        </div>
+                    </div>
+                    <div class="inputFeild">
+                        <label for="dob">DOB : </label>
+                        <input type="date" name="dob" id="dob" onchange="setAge()" required>
+                        <br>
+                        <label for="age">Age</label>
+                        <input type="text" name="age" id="age" disabled>
+                    </div>
+                    <div class="inputFeild">
+                        <label for="password">Password</label>
+                        <div class="passFeild">
+                            <span id="checkPass">@</span>
+                            <input type="password" name="password" id="sPassword" placeholder="Password"
+                                onchange="ValidPass()">
+                            <input type="checkbox" name="checkbox1" id="passCheck1" onclick="passVisible1()">
+                        </div>
+                    </div>
+                    <div class="inputFeild">
+                        <label for="password">Password</label>
+                        <div class="passFeild">
+                            <span id="checkPass">@</span>
+                            <input type="password" name="repassword" id="sRePassword" placeholder="Re-password"
+                                onchange="ValidPass()">
+                            <input type="checkbox" name="checkbox2" id="passCheck2" onclick="passVisible2()">
+                        </div>
+                    </div>
+
+                    <div class="checkboxInfo">
+                        <p class="info">
+                            <input type="checkbox" name="" id="infoCheck" onchange="infoBox()" required>
+                            Are you confirm for your details to your authorities. if check your details and check it</p>
+                    </div>
+
+                    <div class="signBtns">
+                        <button type="submit" id="signBtn" onclick="signData()">Signup</button>
+                        <button type="reset" id="resetBtn">Reset</button>
+                    </div>
+                </form>
+            </section>
         </div>
     </div>
 
