@@ -25,8 +25,18 @@ const passVisible = () => {
 //Login Button Event
 let loginData = () => {
 
-    if (userName.value.length >= 8 && password.value.length >= 8) {
+    var information = JSON.parse(localStorage.info)
+    console.log(information)
+
+    if (userName.value == information.Email && password.value == information.Password) {
+        var userInfo = {
+            username: information.Email,
+            Password: information.Password,
+            name : information.name
+        }
         console.log(username.value, password.value);
+        alert("Login successfully")
+        localStorage.setItem('user', JSON.stringify(userInfo))
         userName.value = '';
         password.value = '';
     } else if (userName.value.length == 0 && password.value.length == 0) {
@@ -138,6 +148,6 @@ let signData = () => {
         alert("Please enter valid password")
     }
 
-localStorage.setItem('info', JSON.stringify(info))
+    localStorage.setItem('info', JSON.stringify(info))
     // console.log(info)
 }
