@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    // background-color: coral;
+
+    #loginForm,
+    #signupForm {
+        max-width: 35%;
+        min-height: 400px;
+        margin: 40px auto;
+        border-radius: 10px;
+        background-color: orangered;
+
+        h1 {
+            padding: 10px;
+            text-align: center;
+            font-size: 32px;
+            background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 0 20px white);
+        }
+
+        #loginBtn {
+            padding: 10px 20px;
+            margin: 10px 42%;
+            border-radius: 8px;
+            border: 1px solid white;
+            background-color: aqua;
+        }
+
+        .inputFeild {
+            margin: 20px 15% 10px;
+            // border: 1px solid black;
+            color: white;
+
+            label {
+                color: white;
+                margin-left: 10px;
+            }
+            .contentFeild {
+                border: 0.5px solid white;
+                border-radius: 8px;
+                padding: 8px;
+            }
+
+            .passFeild {
+                border: 0.5px solid white;
+                border-radius: 8px;
+                padding: 6px;
+            }
+
+            input {
+                width: 80%;
+                height: 25px;
+                background-color: transparent;
+                margin-left: 10px;
+                outline: none;
+                border: none;
+                color: rgb(184, 184, 184);
+                font-size: 16px;
+                transition: all ease 0.4s;
+
+                &::placeholder {
+                    color: rgb(189, 189, 189);
+                    transition: all ease 0.4s;
+                }
+            }
+
+            #passCheck,
+            #passCheck1,
+            #passCheck2,
+            input[type="radio"] {
+                padding-top: 4px;
+                width: 16px;
+            }
+
+
+        }
+        .checkboxInfo{
+            margin: 10px 45px;
+            color: white;
+        }
+
+        .signBtns {
+            width: fit-content;
+            margin: 20px auto;
+            padding-bottom: 30px;
+
+            button {
+                padding: 10px 20px;
+                margin: 20px 10px;
+                border-radius: 8px;
+                color: white;
+                font-weight: 700;
+                border: 1px solid white;
+                background-color: aqua;
+            }
+            #resetBtn {
+                background-color: red;
+            }
+        }
+    }
+
+    button:hover{
+        filter: drop-shadow(2px 4px 10px white);
+    }
+}

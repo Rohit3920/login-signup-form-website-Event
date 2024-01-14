@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+}
+.container #loginForm,
+.container #signupForm {
+  max-width: 35%;
+  min-height: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: orangered;
+}
+.container #loginForm h1,
+.container #signupForm h1 {
+  padding: 10px;
+  text-align: center;
+  font-size: 32px;
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 20px white);
+}
+.container #loginForm #loginBtn,
+.container #signupForm #loginBtn {
+  padding: 10px 20px;
+  margin: 10px 42%;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: aqua;
+}
+.container #loginForm .inputFeild,
+.container #signupForm .inputFeild {
+  margin: 20px 15% 10px;
+  color: white;
+}
+.container #loginForm .inputFeild label,
+.container #signupForm .inputFeild label {
+  color: white;
+  margin-left: 10px;
+}
+.container #loginForm .inputFeild .contentFeild,
+.container #signupForm .inputFeild .contentFeild {
+  border: 0.5px solid white;
+  border-radius: 8px;
+  padding: 8px;
+}
+.container #loginForm .inputFeild .passFeild,
+.container #signupForm .inputFeild .passFeild {
+  border: 0.5px solid white;
+  border-radius: 8px;
+  padding: 6px;
+}
+.container #loginForm .inputFeild input,
+.container #signupForm .inputFeild input {
+  width: 80%;
+  height: 25px;
+  background-color: transparent;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  color: rgb(184, 184, 184);
+  font-size: 16px;
+  transition: all ease 0.4s;
+}
+.container #loginForm .inputFeild input::-moz-placeholder, .container #signupForm .inputFeild input::-moz-placeholder {
+  color: rgb(189, 189, 189);
+  -moz-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+.container #loginForm .inputFeild input::placeholder,
+.container #signupForm .inputFeild input::placeholder {
+  color: rgb(189, 189, 189);
+  transition: all ease 0.4s;
+}
+.container #loginForm .inputFeild #passCheck,
+.container #loginForm .inputFeild #passCheck1,
+.container #loginForm .inputFeild #passCheck2,
+.container #loginForm .inputFeild input[type=radio],
+.container #signupForm .inputFeild #passCheck,
+.container #signupForm .inputFeild #passCheck1,
+.container #signupForm .inputFeild #passCheck2,
+.container #signupForm .inputFeild input[type=radio] {
+  padding-top: 4px;
+  width: 16px;
+}
+.container #loginForm .checkboxInfo,
+.container #signupForm .checkboxInfo {
+  margin: 10px 45px;
+  color: white;
+}
+.container #loginForm .signBtns,
+.container #signupForm .signBtns {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  padding-bottom: 30px;
+}
+.container #loginForm .signBtns button,
+.container #signupForm .signBtns button {
+  padding: 10px 20px;
+  margin: 20px 10px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  border: 1px solid white;
+  background-color: aqua;
+}
+.container #loginForm .signBtns #resetBtn,
+.container #signupForm .signBtns #resetBtn {
+  background-color: red;
+}
+.container button:hover {
+  filter: drop-shadow(2px 4px 10px white);
+}/*# sourceMappingURL=style.css.map */

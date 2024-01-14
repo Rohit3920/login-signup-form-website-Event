@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form Event</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <!---------------------------------------------------Login form------------------------------------->
-            <scetion id="loginForm">
+            <section id="loginForm">
                 <h1 class="loginHead">Login Form</h1>
                 <form class="content">
                     <div class="inputFeild">
@@ -35,7 +37,7 @@
                     <br>
                     <button type="button" id="loginBtn" onclick="loginData()">Login</button>
                 </form>
-            </scetion>
+            </section>
 
             <!---------------------------------------------------signup form------------------------------------->
             <section id="signupForm">
@@ -43,11 +45,15 @@
                 <form class="content">
                     <div class="inputFeild">
                         <label for="name">Name : </label>
-                        <input type="text" name="name" id="Uname" required>
+                        <div class="contentFeild">
+                            <input type="text" name="name" id="Uname" required>
+                        </div>
                     </div>
                     <div class="inputFeild">
                         <label for="email">Email : </label>
-                        <input type="email" name="email" id="email" required>
+                        <div class="contentFeild">
+                            <input type="email" name="email" id="email" required>
+                        </div>
                     </div>
                     <div class="inputFeild">
                         <label for="country">choose your country: </label>
@@ -62,8 +68,10 @@
                     </div>
                     <div class="inputFeild">
                         <label for="contact">Contact No. : </label>
-                        <span id="countryCode"></span>
-                        <input type="number" name="contact" id="contact" required>
+                        <div class="contentFeild">
+                            <span id="countryCode"></span>
+                            <input type="number" name="contact" id="contact" required>
+                        </div>
                     </div>
                     <div class="inputFeild">
                         <label for="gender">Gender : </label><br />
@@ -78,10 +86,15 @@
                     </div>
                     <div class="inputFeild">
                         <label for="dob">DOB : </label>
-                        <input type="date" name="dob" id="dob" onchange="setAge()" required>
+                        <div class="contentFeild">
+                            <input type="date" name="dob" id="dob" onchange="setAge()" required>
+
+                        </div>
                         <br>
                         <label for="age">Age</label>
-                        <input type="text" name="age" id="age" disabled>
+                        <div class="contentFeild">
+                            <input type="text" name="age" id="age" disabled>
+                        </div>
                     </div>
                     <div class="inputFeild">
                         <label for="password">Password</label>
