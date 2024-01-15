@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: lightblue url(background.jpg) no-repeat fixed center;
+}
+
 .container {
   width: 100vw;
 }
@@ -16,6 +20,9 @@
   color: rgb(0, 243, 0);
   filter: drop-shadow(0 0 4px white);
   animation: rotateIcon 1s alternate-reverse;
+}
+.container .blueVisiblity {
+  color: #30cfd0;
 }
 @keyframes rotateIcon {
   0% {
@@ -31,7 +38,8 @@
   min-height: 400px;
   margin: 40px auto;
   border-radius: 10px;
-  background-color: orangered;
+  border: 1px solid white;
+  background-color: rgba(71, 71, 71, 0.4745098039);
 }
 .container #loginForm h1,
 .container #signupForm h1 {
@@ -73,6 +81,7 @@
   border: 0.5px solid white;
   border-radius: 8px;
   padding: 6px;
+  position: relative;
 }
 .container #loginForm .inputFeild input,
 .container #signupForm .inputFeild input {
@@ -82,9 +91,11 @@
   margin-left: 10px;
   outline: none;
   border: none;
-  color: rgb(184, 184, 184);
+  color: rgb(0, 0, 0);
   font-size: 16px;
   transition: all ease 0.4s;
+  caret-color: white;
+  caret-shape: underscore;
 }
 .container #loginForm .inputFeild input::-moz-placeholder, .container #signupForm .inputFeild input::-moz-placeholder {
   color: rgb(189, 189, 189);
@@ -99,12 +110,23 @@
 .container #loginForm .inputFeild #passCheck,
 .container #loginForm .inputFeild #passCheck1,
 .container #loginForm .inputFeild #passCheck2,
-.container #loginForm .inputFeild input[type=radio],
 .container #signupForm .inputFeild #passCheck,
 .container #signupForm .inputFeild #passCheck1,
-.container #signupForm .inputFeild #passCheck2,
-.container #signupForm .inputFeild input[type=radio] {
+.container #signupForm .inputFeild #passCheck2 {
   padding-top: 4px;
+  width: 16px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.container #loginForm .inputFeild input[type=radio],
+.container #signupForm .inputFeild input[type=radio] {
+  margin-top: 0px;
+  padding-top: 0px;
   width: 16px;
 }
 .container #loginForm .checkboxInfo,

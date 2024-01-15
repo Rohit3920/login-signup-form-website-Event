@@ -24,8 +24,10 @@ const ValidPass = () => {
 
 //password visiblity
 const passVisible = () => {
+    let pcheck = document.getElementById('passCheck')
     passCheck = passCheck == false ? true : false
     password.type = passCheck == true ? 'text' : 'password'
+    pcheck.className = passCheck == true ? 'fa-regular fa-eye blueVisiblity' : 'fa-regular fa-eye-slash'
 }
 
 //Login Button Event
@@ -95,15 +97,20 @@ country.addEventListener("click", function () {
     countryCode.innerText = code;
 });
 
+
 //password visiblity (Password)
 const passVisible1 = () => {
+    let pcheck = document.getElementById('passCheck1')
     passCheck1 = passCheck1 == false ? true : false
+    pcheck.className = passCheck1 == true ? 'fa-regular fa-eye blueVisiblity' : 'fa-regular fa-eye-slash'
     sPassword.type = passCheck1 == true ? 'text' : 'password'
 }
 
 //password visiblity (Repassword)
 const passVisible2 = () => {
+    let pcheck = document.getElementById('passCheck2')
     passCheck2 = passCheck2 == false ? true : false
+    pcheck.className = passCheck2 == true ? 'fa-regular fa-eye blueVisiblity' : 'fa-regular fa-eye-slash'
     sRePassword.type = passCheck2 == true ? 'text' : 'password'
 }
 
