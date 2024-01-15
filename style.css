@@ -7,6 +7,24 @@
 .container {
   width: 100vw;
 }
+.container .wrong {
+  color: rgb(252, 16, 16);
+  filter: drop-shadow(0 0 4px white);
+  animation: rotateIcon 1s;
+}
+.container .correct {
+  color: rgb(0, 243, 0);
+  filter: drop-shadow(0 0 4px white);
+  animation: rotateIcon 1s alternate-reverse;
+}
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .container #loginForm,
 .container #signupForm {
   max-width: 35%;

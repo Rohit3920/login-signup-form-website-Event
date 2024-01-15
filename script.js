@@ -2,18 +2,24 @@
 let userName = document.getElementById("username");
 let password = document.getElementById('password')
 let passCheck = document.getElementById('passCheck').value = false
+let userfeild = document.getElementById('userfeild')
+let passfeild = document.getElementById('passfeild')
 
 
 //check username is valid or not
 const ValidUser = () => {
     let checkUser = document.getElementById("checkUser")
-    checkUser.innerText = userName.value.length >= 8 ? '@' : 'X'
+    checkUser.className = userName.value.length >= 8 ? 'fa-regular fa-user correct' : 'fa-solid fa-x wrong'
+    userfeild.style.borderColor = userName.value.length >= 8 ? 'rgb(0, 243, 0)' : 'rgb(252, 16, 16)'
+    // <i class="fa-regular fa-user"></i>  <i class="fa-solid fa-x"></i>
 }
 
 //password Validation
 const ValidPass = () => {
     let checkPass = document.getElementById("checkPass")
-    checkPass.innerText = password.value.length >= 8 ? '@' : 'X'
+    checkPass.className = password.value.length >= 8 ? 'fa-solid fa-lock correct' : 'fa-solid fa-x wrong'
+    passfeild.style.borderColor = password.value.length >= 8 ? 'rgb(0, 243, 0)' : 'rgb(252, 16, 16)'
+    // <i class="fa-solid fa-lock"></i><i class="fa-solid fa-x"></i>
 }
 
 //password visiblity
@@ -62,6 +68,8 @@ let sRePassword = document.getElementById("sRePassword");
 let passCheck1 = document.getElementById('passCheck1').value = false
 let passCheck2 = document.getElementById('passCheck2').value = false
 let age = document.getElementById('age');
+let passFeild2 = document.getElementById('passFeild2')
+let passFeild3 = document.getElementById('passFeild3')
 
 
 //Calculate Date
@@ -98,6 +106,24 @@ const passVisible2 = () => {
     passCheck2 = passCheck2 == false ? true : false
     sRePassword.type = passCheck2 == true ? 'text' : 'password'
 }
+
+//password Validation
+const ValidPass2 = () => {
+    let checkPass2 = document.getElementById("checkPass2")
+    checkPass2.className = sPassword.value.length >= 8 ? 'fa-solid fa-lock correct' : 'fa-solid fa-x wrong'
+    passFeild2.style.borderColor = sPassword.value.length >= 8 ? 'rgb(0, 243, 0)' : 'rgb(252, 16, 16)'
+    // <i class="fa-solid fa-lock"></i><i class="fa-solid fa-x"></i>
+}
+
+
+//password Validation
+const ValidPass3 = () => {
+    let checkPass3 = document.getElementById("checkPass3")
+    checkPass3.className = sRePassword.value.length >= 8 ? 'fa-solid fa-lock correct' : 'fa-solid fa-x wrong'
+    passFeild3.style.borderColor = sRePassword.value.length >= 8 ? 'rgb(0, 243, 0)' : 'rgb(252, 16, 16)'
+    // <i class="fa-solid fa-lock"></i><i class="fa-solid fa-x"></i>
+}
+
 
 //check box for correct information
 var infoCheck = document.getElementById('infoCheck').value = false;
